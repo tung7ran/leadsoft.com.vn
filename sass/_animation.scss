@@ -1,0 +1,595 @@
+*{
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+.wrap-body,header,footer{
+  background-color: #021c2c;
+}
+
+.header{
+  height: 0;
+  padding-top: 3rem;
+  .header-outside{
+    padding: 2.7rem 0 2.7rem;
+    height: 7.7rem;
+    margin: 0 auto;
+    &-nav{
+      padding-left: 60rem;
+    }
+    img{
+      height: auto;
+      width: 21rem;
+    }
+    li{
+      display: inline-block;
+      margin-right: 2.1rem;
+      a{
+        font-size: 1.8rem;
+        color: #ffffff;
+      }
+    }
+  }
+}
+@for $i from 1 through 10 {
+    .content-news-right-item:nth-child(#{$i}) {
+      animation:jump 4s infinite;
+      animation-delay:calc(.1*#{$i}s);
+    }
+  }
+
+@for $i from 1 through 10 {
+    .content-news-right-items:nth-child(#{$i}) {
+      animation:jumps 3s infinite;
+      animation-delay:calc(.1*#{$i}s);
+    }
+  }
+  $gutter:1em;
+
+.content-news{
+    // background-color: #2f3a4b;
+    padding-bottom: 10rem;
+    .content-news-animation{
+      padding-top: 10rem;
+    }
+    &-left{
+    color: #ffffff;
+    padding-top: 20rem;
+    position: relative;
+    
+      h4{
+        font-size: 7.2rem;
+        margin-bottom: 5rem;
+        font-weight: 70rem;
+      }
+      h4:nth-child(2){
+        background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        height: 8rem;
+        padding: 1.8rem 0;
+      }
+      p{
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 170%;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      &-light-blur{
+        width: 45rem;
+        height: 45rem;
+        position: absolute;
+        top: 24rem;
+        left: -42rem;
+        z-index: 20;
+        -webkit-filter: blur(35em);
+        filter: blur(35em);
+        background-color: #ffffff;
+      }
+    }
+    &-right {
+      margin: 4em 0 0 10rem;
+      width: 50rem;
+      height: 70rem;
+      position: relative;
+      &-item {
+        margin-left:$gutter;
+        flex:1;
+        width: 48rem;
+        height: 28.4rem;
+        img{
+          width: 17.8rem;
+          height: 28.4rem;
+        }
+      } 
+      .card-up{
+        position: absolute;
+        top: 0;
+        z-index: 17;
+        background-image: url('/images/1.png');
+        background-repeat: no-repeat;
+      }
+      .card-between{
+        position: absolute;
+        top: 10rem;
+        left: 5.5rem;
+        z-index: 16;
+        background-image: url('/images/2.png');
+        background-repeat: no-repeat;
+        filter: drop-shadow(2px 15px 10px black);
+
+      }
+      .card-down{
+        position: absolute;
+        top: 19rem;
+        left: 7rem;
+        z-index: 15;
+        background-image: url('/images/3.png');
+        background-repeat: no-repeat;
+      }
+      .hand{
+        background-image: url('/images/4.png');
+        background-repeat: no-repeat;
+        width: 67rem;
+        height: 41.5rem;
+        position: absolute;
+        bottom: 2rem;
+        left: -6rem;
+        z-index: 16;
+      }
+      .light-up{
+        position: absolute;
+        right: -12.2rem;
+        bottom: 6.5rem;
+        width: 70rem;
+        height: 65rem;
+        z-index: 16;
+        background-image: url('/images/5.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .small-ball{
+        position: absolute;
+        right: 37rem;
+        bottom: 25rem;
+        width: 6rem;
+        height: 6rem;
+        z-index: 6;
+        background-image: url('/images/circle.png');
+        background-repeat: no-repeat;
+      }
+      .medium-ball{
+        position: absolute;
+        right: 0rem;
+        bottom: 30rem;
+        width: 7rem;
+        height: 7rem;
+        z-index: 15;
+        background-image: url('/images/circle2.png');
+        background-repeat: no-repeat;
+      }
+      .large-ball{
+        position: absolute;
+        left: -3rem;
+        top: 0rem;
+        width: 10.4rem;
+        height: 10.7rem;
+        z-index: 17;
+        background-image: url('/images/circle3.png');
+        background-repeat: no-repeat;
+      }
+      &-light-blur{
+        width: 45rem;
+        height: 45rem;
+        position: absolute;
+        top: 0;
+        left: 6.2rem;
+        z-index: 2rem;
+        -webkit-filter: blur(35rem);
+        filter: blur(35rem);
+        background-color: #ffffff;
+      }
+    }
+
+  @keyframes jump
+  {
+      0% {
+          transform: translate(0rem, 0rem);   
+      
+      }
+      50% {
+          transform: translate(3rem, 7rem);
+  
+      }
+    100% {
+          transform: translate(0rem, 0rem);
+  
+      }
+  }
+  @keyframes jumps
+  {
+      0% {
+          transform: translate(0rem, 0rem);   
+      
+      }
+      50% {
+          transform: translate(0.5rem, -1rem);
+  
+      }
+    100% {
+          transform: translate(0rem, 0rem);
+  
+      }
+  }
+
+  &-achievement{
+    // display: flex;
+    margin-left: 6.5rem;
+    ul{
+      display: inline-block;
+      li{
+        display: inline-block;
+        margin-right: 10rem;
+        .number{
+          font-size: 4rem;
+          color: #ffffff;
+          width: 8rem;
+          margin-right: 2rem;
+        }
+        .text{
+          display: block;
+          float: right;
+          font-size: 2rem;
+          margin-top: 0.8rem;
+          background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      li:last-child{
+        margin-right: 0;
+      }
+    }
+
+  }
+  &-service{
+    margin-top: 11rem;
+    &-first-left{
+      h4{
+        font-size: 4.8rem;
+        color: #ffffff;
+        line-height: 10rem;
+        font-weight: bold;
+      }
+      p{
+        color: #ffffff;
+        font-size: 2rem;
+        padding-top: 2rem;
+      }
+      button{
+        width: 15rem;
+        height: 7rem;
+        border-radius: 1.5rem;    
+        background: linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin-top: 5rem;
+      }
+    }
+    &-first-right{
+      margin-left: 12rem;
+      width: 47.7rem;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-second-left{
+      margin-left: 0rem;
+      width: 47.7rem;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-second-right{
+      margin-left: 12rem;
+      h4{
+        font-size: 4.8rem;
+        color: #ffffff;
+        line-height: 10rem;
+        font-weight: bold;
+      }
+      p{
+        color: #ffffff;
+        font-size: 2rem;
+        padding-top: 2rem;
+      }
+      button{
+        width: 15rem;
+        height: 7rem;
+        border-radius: 1.5rem;    
+        background: linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin-top: 5rem;
+      }
+    }
+  }
+  &-partner{
+    text-align: center;
+    margin-top: 14rem;
+    h4{
+      color: #fff;
+      margin-bottom: 4rem;
+      font-weight: 700;
+      font-size: 4.8rem;
+    }
+    &__logo{
+      
+      &--item{
+        display: inline-block;
+        width: 12rem;
+        height: 12rem;
+        margin-right: 7rem;
+      }
+    }
+  }
+  &-feedback{
+    margin-top: 9rem;
+    &-title{
+      h4{
+        font-size: 4.8rem;
+        color: #fff;
+        line-height: 8rem;
+      }
+    }
+    &-card{
+      position: relative;
+      width: 28rem;
+      height: 40rem;
+      margin: 5rem 6rem 0 0;
+      box-shadow: 0 0 2rem rgba(88, 224, 254, 0.952);
+      border-radius: 1.5rem;
+      background: rgba(255, 255, 255, 0.5);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-left: 1px solid rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(0.5rem);
+      &:hover{
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      &-content{
+        padding: 2rem;
+        text-align: center;
+        transform: translateY(10rem);
+        transition: 2.5s;
+        &-image{
+          width: 16rem;
+          height: 16rem;
+          border-radius: 30rem;
+          top: -19rem;
+          left: 5.5rem;
+          overflow: hidden;
+          position: absolute;
+          img{
+            position: absolute;
+            right: -5rem;
+            width: 30rem;
+          }
+        }
+        h4{
+          position: absolute;         
+          top: -3rem;
+          right: 1rem;
+          font-size: 6rem;
+          color: rgba(255, 255, 255, 0.05);
+          pointer-events: none;
+        }
+        span{
+          font-size: 2rem;
+          color: #fff;
+          z-index: 1;
+        }
+        p{
+          font-size: 1.3rem;
+          color: #fff;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+.footer{
+  color: #fff;
+  padding-top: 10rem;
+  background-color: #01131f;
+  &-line{
+    height: 30rem;
+    border-bottom: 1px solid #3F3E45
+  }
+  &-logo{
+    margin-right: 8rem;
+    &:last-child{
+      margin-right: 0;
+    }
+    width: 26.6rem;
+    height: 7.2rem;
+    h4{
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    span,p{
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      display: block;
+    }
+    &-contact{
+      padding-top: 1.5rem;
+      span{
+        margin: 1rem 0 1rem 0;
+      }
+      &-social{
+        &__item{
+          margin-top: 2rem;
+          &--son{
+            width: 3.5rem;
+            height: 3.5rem;
+            display: inline-block;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+  &-cr{
+    height: 5rem;
+    width: 100%;
+    display: inline-block;
+    color: #ffffff;
+    padding-top: 1.5rem;
+    span{
+      width: 30rem;
+      &:last-child{
+        float: right;
+      }
+    }
+  }
+}
+// #universe {
+//   width: 100%;
+//   height: 100%;
+
+// }
+  
+// #galaxy {
+//   position: relative;
+//   width: 100%;
+//   height: 100%;
+//   transform: rotateX(70deg);
+//   transform-style: preserve-3d;
+//   z-index: 14;
+// }
+
+// #sun, .planet {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 1em;
+//   height: 1em;
+//   margin-top: -0.5em;
+//   margin-left: -0.5em;
+//   border-radius: 50%;
+//   transform-style: preserve-3d;
+// }
+// .pos {
+//   position: absolute;
+//   transform-style: preserve-3d;
+//   animation-name: invert;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+// }
+
+// .planet {
+//   background-image: url(/images/circle.png);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear;
+
+// }
+
+// .orbit {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   border-radius: 50%;
+//   animation-name: orbit;
+//   animation-iteration-count: infinite;
+//   animation-timing-function: linear; 
+//   transform-style: preserve-3d;
+// }
+
+// /* Animations */
+// @keyframes orbit {
+//   0%   { transform: rotateZ(0deg); }
+//   100% { transform: rotateZ(-360deg); } 
+// }
+
+// @keyframes invert {
+//   0%   { transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg); }
+//   100% { transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg); } 
+// }
+
+// /* Orbit sizes */
+// #mercury.orbit {
+//   width: 6em;
+//   height: 6em;
+//   margin-top: 3em;
+//   margin-left: -3em;
+// }
+
+// /* Planet starting positions */
+// #mercury .pos {
+//   left: 50%;
+//   top: -1px; 
+//   border: solid 3px red;
+// } 
+
+// /* Planet animation durations */
+// #mercury.orbit, #mercury .pos {
+//   animation-duration: 2.89016s;
+// }
+  
+// /* Planet sizes */
+// #sun {
+//     font-size: 24em;
+// }
+// #mercury {
+//     font-size: 4em;
+// }
+
+// /* Planet shadow animations */
+// #mercury .planet {
+//   animation-name: shadow-mercury;
+//   animation-duration: 2.89016s; }
+  
+// @keyframes shadow-mercury {
+//   0% {
+//     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+//     /* TOP */ }
+
+//   25% {
+//     box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5);
+//     /* LEFT */ }
+
+//   50% {
+//     box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
+//     /* BOTTOM */ }
+
+//   50.01% {
+//     box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.5);
+//     /* BOTTOM */ }
+
+//   75% {
+//     box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
+//     /* RIGHT */ }
+    
+//   100% {
+//     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+//     /* TOP */ }    
+// }
+// .universe2{
+//   position: absolute;
+//   top: 0;
+//   z-index: 10;
+//   left: 10px;
+// }
