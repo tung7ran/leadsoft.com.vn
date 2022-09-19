@@ -367,6 +367,7 @@ img {
 
 .content-news-left h4:nth-child(2) {
   background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   height: 8rem;
   padding: 1.8rem 0;
@@ -594,6 +595,7 @@ img {
   font-size: 2rem;
   margin-top: 0.8rem;
   background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -603,6 +605,10 @@ img {
 
 .content-news-service {
   margin-top: 11rem;
+}
+
+.content-news-service-first-left {
+  position: relative;
 }
 
 .content-news-service-first-left h4 {
@@ -618,14 +624,63 @@ img {
   padding-top: 2rem;
 }
 
-.content-news-service-first-left button {
-  width: 15rem;
-  height: 7rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+.content-news-service-first-left-button {
+  cursor: pointer;
+  height: 6rem;
+  width: 18rem;
+  position: absolute;
+  margin: auto;
+  bottom: 2rem;
+  left: 0;
+  -webkit-box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #1c1b29;
+}
+
+.content-news-service-first-left-button:before {
+  content: "";
+  background-image: conic-gradient(black 10deg, black, #11051f, #054a58, #066072, #086578, #0a95b1, #0cabcb, #0eb9db, #0fd2f9, #030e26, black, black, #02264c, #075285, #00428c, #0061c9, #a0def8, #66e9fb, black 360deg);
+  height: 300%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  -webkit-animation: rotate 10s infinite linear;
+  animation: rotate 3s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.content-news-service-first-left-button:after {
+  content: "Get Started";
+  height: 93%;
+  width: 98%;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: black;
+  top: 0.2rem;
+  left: 0.2rem;
+  color: #57e0fe;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.8rem;
-  margin-top: 5rem;
+  letter-spacing: 0.6rem;
 }
 
 .content-news-service-first-right {
@@ -649,6 +704,7 @@ img {
 }
 
 .content-news-service-second-right {
+  position: relative;
   margin-left: 12rem;
 }
 
@@ -665,14 +721,56 @@ img {
   padding-top: 2rem;
 }
 
-.content-news-service-second-right button {
-  width: 15rem;
-  height: 7rem;
-  border-radius: 1.5rem;
-  background: linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+.content-news-service-second-right-button {
+  cursor: pointer;
+  height: 6rem;
+  width: 18rem;
+  position: absolute;
+  margin: auto;
+  bottom: 2rem;
+  left: 0;
+  -webkit-box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2rem 3.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #1c1b29;
+}
+
+.content-news-service-second-right-button:before {
+  content: "";
+  background-image: conic-gradient(black 10deg, black, #11051f, #054a58, #066072, #086578, #0a95b1, #0cabcb, #0eb9db, #0fd2f9, #030e26, black, black, #02264c, #075285, #00428c, #0061c9, #a0def8, #66e9fb, black 360deg);
+  height: 300%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  -webkit-animation: rotate 10s infinite linear;
+  animation: rotate 3s infinite linear;
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.content-news-service-second-right-button:after {
+  content: "Get Started";
+  height: 93%;
+  width: 98%;
+  position: absolute;
+  border-radius: 0.5rem;
+  background-color: black;
+  top: 0.2rem;
+  left: 0.2rem;
+  color: #57e0fe;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
   font-weight: 700;
-  font-size: 1.8rem;
-  margin-top: 5rem;
+  letter-spacing: 0.6rem;
 }
 
 .content-news-partner {

@@ -11,8 +11,8 @@
           integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="sass/main.css">
-    <link rel="stylesheet" href="/libraries/node_modules/wow/css/libs/animate.css">
-    <script src="/libraries/node_modules/wow/dist/wow.js"></script>
+    <link rel="stylesheet" href="./libraries/node_modules/wow/css/libs/animate.css">
+    <script src="./libraries/node_modules/wow/dist/wow.js"></script>
 </head>
 <body>
     <header class="header">
@@ -74,26 +74,6 @@
                         <div class="content-news-right-items medium-ball"></div>
                         <div class="content-news-right-item large-ball"></div>
                         <div class="content-news-right-light-blur"></div>
-                        <!-- <div id="universe">
-                            <div id="galaxy">
-                            <div id="sun"></div>
-                                <div id="mercury" class="orbit">
-                                    <div class="pos">
-                                        <div class="planet"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="universe2" id="universe">
-                            <div id="galaxy">
-                                <div id="sun"></div>
-                                    <div id="mercury" class="orbit">
-                                        <div class="pos">
-                                        <div class="planet"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="content-news-achievement">
                         <ul class="content-news-achievement__list">
@@ -110,12 +90,14 @@
                             Iure labore molestias perferendis alias earum consequuntur 
                             cumque architecto nostrum aspernatur fugit repudiandae
                             commodi dicta voluptate molestiae dignissimos, soluta, saepe ipsa in!</p>
-                        <button class="content-news-service-left-button">Get Started</button>
+                        <div class="content-news-service-first-left-button">
+                            <button class="content-news-service-first-left-button-item">Get Started</button>
+                        </div>
                     </div>
                     <div class="col-xl-6 content-news-service-first-right wow bounceInUp">
                         <img src="./images/ERP.png" alt="">
                     </div>
-                
+                </div>
                 <div class="row content-news-service">
                     <div class="col-xl-6 content-news-service-second-left  wow bounceInUp">
                         <img src="./images/ERP.png" alt="">
@@ -126,7 +108,9 @@
                             Iure labore molestias perferendis alias earum consequuntur 
                             cumque architecto nostrum aspernatur fugit repudiandae
                             commodi dicta voluptate molestiae dignissimos, soluta, saepe ipsa in!</p>
-                        <button>Get Started</button>
+                            <div class="content-news-service-second-right-button">
+                                <button class="content-news-service-second-right-button-item">Get Started</button>
+                            </div>
                     </div>
                 </div>
                 <div class="row content-news-service">
@@ -136,12 +120,15 @@
                             Iure labore molestias perferendis alias earum consequuntur 
                             cumque architecto nostrum aspernatur fugit repudiandae
                             commodi dicta voluptate molestiae dignissimos, soluta, saepe ipsa in!</p>
-                        <button>Get Started</button>
+                            <div class="content-news-service-first-left-button">
+                                <button class="content-news-service-first-left-button-item">Get Started</button>
+                            </div>
                     </div>
                     <div class="col-xl-6 content-news-service-first-right  wow bounceInUp">
                         <img src="./images/ERP.png" alt="">
                     </div>
                 </div>  
+
                 <div class="content-news-feedback">
                     <div class="content-news-feedback-title">
                         <h4>What people are <br> saying about us</h4>
@@ -163,7 +150,7 @@
                                 <div class="content-news-feedback-card-content-image">
                                     <img src="./images/newImage/alex.jpg" alt="">
                                 </div>
-                                <h4>01</h4>
+                                <h4>02</h4>
                                 <span>Alex</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                     Soluta vitae ipsum, doloremque.</p>
@@ -174,7 +161,7 @@
                                 <div class="content-news-feedback-card-content-image">
                                     <img src="./images/newImage/nia.jpg" alt="">
                                 </div>
-                                <h4>01</h4>
+                                <h4>03</h4>
                                 <span>Nia</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                     Soluta vitae ipsum, doloremque.</p>
@@ -185,7 +172,7 @@
                                 <div class="content-news-feedback-card-content-image">
                                     <img src="./images/newImage/front.jpg" alt="">
                                 </div>
-                                <h4>01</h4>
+                                <h4>04</h4>
                                 <span>Front</span>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                     Soluta vitae ipsum, doloremque.</p>
@@ -202,6 +189,7 @@
                         <li class="content-news-partner__logo--item"><img src="./images/LOGO-VIB-bw-small-2.png" alt=""></li>
                     </ul>
                 </div>
+
             </div>
         </div>
     </div>
@@ -266,29 +254,11 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-        <!-- <script src="solar.js"></script> -->
-        <script type="text/javascript" src="./vanilla-tilt.js"></script>
-        <script>
-            VanillaTilt.init(document.querySelectorAll(".content-news-feedback-card"), {
-                max: 25,
-                speed: 400,
-                glare: true,
-                "max-glare": 1,
-            });
-        </script>
-        <script>
-            wow = new WOW(
-              {
-                animateClass: 'animated',
-                offset:       100,
-                callback:     function(box) {
-                  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-                }
-              }
-            );
-            wow.init();
-        </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <!-- <script src="solar.js"></script> -->
+    <script type="text/javascript" src="./js/vanilla-tilt.js"></script>
+    <script type="text/javascript" src="./js/about-us.js"></script>
+    
 </body>
 </html>
