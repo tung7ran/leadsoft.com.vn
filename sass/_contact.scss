@@ -1,0 +1,257 @@
+.wrap-body{
+    .contact-content{
+        position: relative;
+        height: 93.7rem;
+        width: 120rem;
+        margin: 0 auto;
+        &-info{
+            width: 34rem;
+            height: 48.8rem;
+            background: $glassblur;
+            backdrop-filter: blur(4rem);
+            border-radius: 20px;
+            position: absolute;
+            top: 22.8rem;
+            z-index: 1;
+            h4{
+                display: block;
+                text-align: center;
+                font-size: 3.2rem;
+                font-weight: 700;
+                margin: 4.8rem 0 5rem;
+                color: $white;
+            }
+            &-item{
+                height: 4rem;
+                width: 28.6rem;
+                margin-top: 5rem;
+                &__img{
+                    width: 4rem;
+                    float: left;
+                    margin-left: 2.7rem;
+                }
+                h4{
+                    font-weight: 400;
+                    font-size: 16px;    
+                    float: left;
+                    margin: 1rem 0 5rem 1rem;
+                }
+            }
+            &-social{
+                float: left;
+                margin-left: 2.6rem;
+                &__img{
+                    width: 100%;
+                    height: 2rem;
+                    &--item{
+                        width: 4.7rem;
+                        display: inline-block;
+                        margin-right: 3rem;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &-form{
+            width: 100rem;
+            height: 64.5rem;   
+            position: absolute;
+            left: 16.5rem;
+            top: 14.7rem;
+            background-color: $glass;
+            border-radius: 2rem;
+            display: inline-block;
+            &-logo{
+                position: relative;
+                &__item{
+                    width: 30.3rem;
+                    height: 3.8rem;
+                    margin: 0 auto;
+                    margin-top: 4.3rem;
+                    filter: drop-shadow(2px 4px 6px $darkblue);
+                }
+                h4{
+                    width: 12rem;
+                    height: 1rem;
+                    display: block;
+                    position: absolute;
+                    right: 2rem;
+                    top: 0;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    color: $bluedark;
+                    img{
+                        width: 1.5rem;
+                        position: absolute;
+                        left: -2rem;
+                        top: 0.5rem;
+                    }
+                }
+            }
+            &-contact{
+                width: 55rem;
+                height: 46rem;
+                margin: 0 0 0 26rem;
+                position: relative;
+                h4{
+                    margin-top: 5rem;
+                    font-size: 2.4rem;
+                    font-weight: 700;
+                    color: $white;
+                    filter: drop-shadow(0.1rem 0.1rem 0.1rem $darkblue);
+                }
+                &__list{
+                    &--item{
+                        position: relative;
+                        display: inline-block;
+                        width: 25rem;
+                        margin: 3rem 4rem 3rem 0;
+                        &:nth-child(2), &:nth-child(4){
+                            margin-right: 0;
+                        }
+                        input, textarea{
+                            width: 100%;
+                            padding: 1rem;
+                            background: transparent;
+                            color: #fff;
+                            border: none;
+                            outline: none;
+                            box-shadow: none;
+                            font-size: 1.6rem;
+                            letter-spacing: 0.1rem;
+                            padding: 1rem 0 0.5rem;
+                            &:valid ~ span, &:focus ~ span{
+                                color: #021c2c;
+                                transform: translateY(-2.6rem);
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                            }     
+                            &:valid ~ i, &:focus ~ i{
+                                &::before{
+                                    left: 0;
+                                } 
+                            }
+                        }
+                        i{
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 0.2rem;
+                            background: #fff;
+                            overflow: hidden;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                left: -100%;
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(90deg,  #7d64ff,#7d64ff 23.4%,#fff 51.23%,#00cdff 72.41%#00cdff,#7d64ff);
+                                animation: contactinput 1s linear infinite; 
+                                transition: 1s;
+                            }
+                        }
+                        span{
+                            position: absolute;
+                            left: 0;
+                            padding: 1rem 0 0.5rem;
+                            pointer-events: none;
+                            font-size: 1.6rem;
+                            color: $white;
+                            text-transform: uppercase;
+                            transition: 0.5s;
+                            letter-spacing: 0.1rem;
+                        }
+                        @keyframes contactinput{
+                            0%{
+                                background-position-x: 0;
+                            }
+                            100%{
+                                background-position-x: 25rem;
+                            }                               
+                        }
+                    }
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        background-image: url(/images/global-02.png);
+                    }
+                }
+               
+                &-button{
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 6rem;
+                    width: 18rem;
+                    position: absolute;
+                    margin: auto;
+                    bottom: 2rem;
+                    left: 0;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                    filter: drop-shadow(0rem 0rem 1rem $lightblue);    
+                    &:hover:before {
+                        content: "";
+                        background-image: conic-gradient($black 10deg, $black, $blue, $lightupblue, $lightblue, $lightblue, $black, $black, $blue, $lightblue, $lightblue, $lightblue, $lightupblue, $white, $black 360deg);
+                        height: 300%;
+                        width: 300%;
+                        position: absolute;
+                        left: -100%;
+                        top: -100%;
+                        -webkit-animation: rotate 3s infinite linear;
+                        animation: rotate 2s infinite linear;
+                        }
+                    @keyframes rotate {
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+                    &:hover:after {
+                        content: "Send";
+                        height: 93%;
+                        width: 98%;
+                        position: absolute;
+                        border-radius: 0.5rem;
+                        background-color: $darkblue;
+                        top: 0.2rem;
+                        left: 0.2rem;
+                        color:$lightblue;
+                        display: grid;
+                        place-items: center;
+                        font-size: 1.5rem ;
+                        font-weight: 700;
+                        letter-spacing: 0.6rem;
+                        }  
+                    &--item{
+                        background-color: $darkblue;
+                        width: 100%;
+                        height: 100%;
+                        color: $white;
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        letter-spacing: 0.6rem;
+                        text-align: center;
+                        display: block;
+                        z-index: 3;
+                    }
+                    span{
+                        position: absolute;
+                        width: 60%;
+                        height: 20rem;
+                        top: -46px;
+                        left: 0;
+                        background: $light;
+                        transform: skew(25deg);
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
