@@ -1,0 +1,624 @@
+*{
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .active{
+    color: $lightblue !important;
+  }
+}
+.wrap-body,header,footer{
+  background-color: $darkblue;
+}
+
+.header{
+  height: 0;
+  padding-top: 3rem;
+  .header-outside{
+    padding: 2.7rem 0 2.7rem;
+    height: 7.7rem;
+    margin: 0 auto;
+    &-nav{
+      padding-left: 60rem;
+    }
+    img{
+      height: auto;
+      width: 21rem;
+    }
+    li{
+      display: inline-block;
+      margin-right: 2.1rem;
+      a{
+        font-size: 1.8rem;
+        color: $white;
+      }
+    }
+  }
+}
+@for $i from 1 through 10 {
+    .content-news-right-item:nth-child(#{$i}) {
+      animation:jump 4s infinite;
+      animation-delay:calc(.1*#{$i}s);
+    }
+  }
+
+@for $i from 1 through 10 {
+    .content-news-right-items:nth-child(#{$i}) {
+      animation:jumps 3s infinite;
+      animation-delay:calc(.1*#{$i}s);
+    }
+  }
+  $gutter:1em;
+
+.content-news{
+    padding-bottom: 10rem;
+    .content-news-animation{
+      padding-top: 10rem;
+    }
+    &-left{
+    color: $white;
+    padding-top: 20rem;
+    position: relative;
+    
+      h4{
+        font-size: 7.2rem;
+        margin-bottom: 5rem;
+        font-weight: 70rem;
+      }
+      h4:nth-child(2){
+        background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, $lightupblue 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        height: 8rem;
+        padding: 1.8rem 0;
+      }
+      p{
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 170%;
+        color: $gray;
+      }
+      &-light-blur{
+        width: 45rem;
+        height: 45rem;
+        position: absolute;
+        top: 24rem;
+        left: -42rem;
+        z-index: 20;
+        -webkit-filter: blur(35em);
+        filter: blur(35em);
+        background-color: $white;
+      }
+    }
+    &-right {
+      margin: 4em 0 0 10rem;
+      width: 50rem;
+      height: 70rem;
+      position: relative;
+      &-item {
+        margin-left:$gutter;
+        flex:1;
+        width: 48rem;
+        height: 28.4rem;
+        img{
+          width: 17.8rem;
+          height: 28.4rem;
+        }
+      } 
+      .card-up{
+        position: absolute;
+        top: 0;
+        z-index: 17;
+        background-image: url('/images/1.png');
+        background-repeat: no-repeat;
+      }
+      .card-between{
+        position: absolute;
+        top: 10rem;
+        left: 5.5rem;
+        z-index: 16;
+        background-image: url('/images/2.png');
+        background-repeat: no-repeat;
+        filter: drop-shadow(2px 15px 10px $black);
+
+      }
+      .card-down{
+        position: absolute;
+        top: 19rem;
+        left: 7rem;
+        z-index: 15;
+        background-image: url('/images/3.png');
+        background-repeat: no-repeat;
+      }
+      .hand{
+        background-image: url('/images/4.png');
+        background-repeat: no-repeat;
+        width: 67rem;
+        height: 41.5rem;
+        position: absolute;
+        bottom: 2rem;
+        left: -6rem;
+        z-index: 16;
+      }
+      .light-up{
+        position: absolute;
+        right: -12.2rem;
+        bottom: 6.5rem;
+        width: 70rem;
+        height: 65rem;
+        z-index: 16;
+        background-image: url('/images/5.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .small-ball{
+        position: absolute;
+        right: 37rem;
+        bottom: 25rem;
+        width: 6rem;
+        height: 6rem;
+        z-index: 6;
+        background-image: url('/images/circle.png');
+        background-repeat: no-repeat;
+      }
+      .medium-ball{
+        position: absolute;
+        right: 0rem;
+        bottom: 30rem;
+        width: 7rem;
+        height: 7rem;
+        z-index: 15;
+        background-image: url('/images/circle2.png');
+        background-repeat: no-repeat;
+      }
+      .large-ball{
+        position: absolute;
+        left: -3rem;
+        top: 0rem;
+        width: 10.4rem;
+        height: 10.7rem;
+        z-index: 17;
+        background-image: url('/images/circle3.png');
+        background-repeat: no-repeat;
+      }
+      &-light-blur{
+        width: 45rem;
+        height: 45rem;
+        position: absolute;
+        top: 0;
+        left: 6.2rem;
+        z-index: 2rem;
+        -webkit-filter: blur(35rem);
+        filter: blur(35rem);
+        background-color: $white;
+      }
+    }
+
+  @keyframes jump
+  {
+      0% {
+          transform: translate(0rem, 0rem);   
+      
+      }
+      50% {
+          transform: translate(3rem, 7rem);
+  
+      }
+    100% {
+          transform: translate(0rem, 0rem);
+  
+      }
+  }
+  @keyframes jumps
+  {
+      0% {
+          transform: translate(0rem, 0rem);   
+      
+      }
+      50% {
+          transform: translate(0.5rem, -1rem);
+  
+      }
+    100% {
+          transform: translate(0rem, 0rem);
+  
+      }
+  }
+
+  &-achievement{
+    margin-left: 6.5rem;
+    ul{
+      display: inline-block;
+      li{
+        display: inline-block;
+        margin-right: 10rem;
+        .number{
+          font-size: 4rem;
+          color: $white;
+          width: 8rem;
+          margin-right: 2rem;
+        }
+        .text{
+          display: block;
+          float: right;
+          font-size: 2rem;
+          margin-top: 0.8rem;
+          background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, $lightupblue 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      li:last-child{
+        margin-right: 0;
+      }
+    }
+
+  }
+  &-service{
+    position: relative;
+    margin-top: 11rem;
+    &-first-left{
+      position: relative;
+      h4{
+        font-size: 4.8rem;
+        color: $white;
+        line-height: 10rem;
+        font-weight: bold;
+      }
+      p{
+        color: $white;
+        font-size: 2rem;
+        padding-top: 2rem;
+      }
+      &-button {
+        cursor: pointer;
+        height: 6rem;
+        width: 18rem;
+        position: absolute;
+        margin: auto;
+        bottom: 2rem;
+        left: 0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        filter: drop-shadow(0rem 0rem 1rem $lightblue);    
+        &:hover:before {
+          content: "";
+          background-image: conic-gradient($black 10deg, $black, $blue, $lightupblue, $lightblue, $lightblue, $black, $black, $blue, $lightblue, $lightblue, $lightblue, $lightupblue, $white, $black 360deg);
+          height: 300%;
+          width: 300%;
+          position: absolute;
+          left: -100%;
+          top: -100%;
+          -webkit-animation: rotate 3s infinite linear;
+          animation: rotate 2s infinite linear;
+        }
+        @keyframes rotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        &:hover:after {
+          content: "Get Started";
+          height: 93%;
+          width: 98%;
+          position: absolute;
+          border-radius: 0.5rem;
+          background-color: $darkblue;
+          top: 0.2rem;
+          left: 0.2rem;
+          color:$lightblue;
+          display: grid;
+          place-items: center;
+          font-size: 1.5rem ;
+          font-weight: 700;
+          letter-spacing: 0.6rem;
+        }  
+        &--item{
+          background-color: $darkblue;
+          width: 100%;
+          height: 100%;
+          color: $white;
+          font-size: 1.5rem;
+          font-weight: 700;
+          letter-spacing: 0.6rem;
+          text-align: center;
+          display: block;
+          padding-top: 2rem;
+          span{
+            position: absolute;
+            width: 60%;
+            height: 20rem;
+            top: -46px;
+            left: 0;
+            background: $light;
+            transform: skew(25deg);
+            z-index: 20;
+          }
+        }
+      }
+    }
+    &-first-right{
+      margin-left: 12rem;
+      width: 47.7rem;
+      height: 37.5rem;
+      img{
+        width: 100%;
+        height: auto;
+      } 
+    }
+    &-second-left{
+      margin-left: 0rem;
+      width: 47.7rem;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-second-right{
+      position: relative;
+      margin-left: 12rem;
+      h4{
+        font-size: 4.8rem;
+        color: $white;
+        line-height: 10rem;
+        font-weight: bold;
+      }
+      p{
+        color: $white;
+        font-size: 2rem;
+        padding-top: 2rem;
+      }
+      &-button {
+        cursor: pointer;
+        height: 6rem;
+        width: 18rem;
+        position: absolute;
+        margin: auto;
+        bottom: 2rem;
+        left: 0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        filter: drop-shadow(0rem 0rem 1rem $lightblue);    
+        &:hover:before {
+          content: "";
+          background-image: conic-gradient($black 10deg, $black, $blue, $lightupblue, $lightblue, $lightblue, $black, $black, $blue, $lightblue, $lightblue, $lightblue, $lightupblue, $white, $black 360deg);
+          height: 300%;
+          width: 300%;
+          position: absolute;
+          left: -100%;
+          top: -100%;
+          -webkit-animation: rotate 2s infinite linear;
+          animation: rotate 2s infinite linear;
+        }
+        @keyframes rotate {
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+        &:hover:after {
+          content: "Get Started";
+          height: 93%;
+          width: 98%;
+          position: absolute;
+          border-radius: 0.5rem;
+          background-color: $darkblue;
+          top: 0.2rem;
+          left: 0.2rem;
+          color:$lightblue;
+          display: grid;
+          place-items: center;
+          font-size: 1.5rem ;
+          font-weight: 700;
+          letter-spacing: 0.6rem;
+        }  
+        &--item{
+          background-color: $darkblue;
+          width: 100%;
+          height: 100%;
+          color: $white;
+          font-size: 1.5rem;
+          font-weight: 700;
+          letter-spacing: 0.6rem;
+          text-align: center;
+          display: block;
+          padding-top: 2rem;
+          span{
+            position: absolute;
+            width: 60%;
+            height: 20rem;
+            top: -46px;
+            left: 0;
+            background: rgba(255, 255, 255, 0.075);
+            transform: skew(25deg);
+            z-index: 20;
+          }
+        }
+      }
+    }
+    &-light-blur{
+      width: 45rem;
+      height: 45rem;
+      position: absolute;
+      top: 0;
+      left: -40rem;
+      z-index: 2rem;
+      -webkit-filter: blur(35rem);
+      filter: blur(43rem);
+      background-color: #e450ff;
+    }
+  }
+  &-our-team{
+    position: relative;
+    margin-top: 9rem;
+    &-light-blur{
+      width: 45rem;
+      height: 45rem;
+      position: absolute;
+      top: 0;
+      right: -40rem;
+      z-index: 2rem;
+      -webkit-filter: blur(35rem);
+      filter: blur(43rem);
+      background-color: $lightblue;
+    }
+    &-title{
+      h4{
+        font-size: 4.8rem;
+        color: $white;
+        line-height: 8rem;
+        text-align: center;
+        font-weight: 700;
+      }
+    }
+    .slick-track{
+      height: 60rem;
+    }
+    &-card{
+      position: relative;
+      width: 27.5rem;
+      height: 40rem !important;
+      margin: 10rem 3rem 0 3rem;
+      padding-top: 14rem;
+      box-shadow: 0 0 2rem $lightblue;
+      border-radius: 1.5rem;
+      background: $glass;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid $light;
+      border-left: 1px solid $light;
+      backdrop-filter: blur(0.5rem);
+      &:hover{
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+      &-content{
+        padding: 2rem;
+        text-align: center;
+        transform: translateY(10rem);
+        transition: 2.5s;
+        &-image{
+          width: 16rem;
+          height: 16rem;
+          border-radius: 30rem;
+          top: -19rem;
+          left: 5.5rem;
+          overflow: hidden;
+          position: absolute;
+          img{
+            position: absolute;
+            right: -5rem;
+            width: 30rem;
+          }
+        }
+        h4{
+          position: absolute;         
+          top: -3rem;
+          right: 1rem;
+          font-size: 6rem;
+          color: $light;
+          pointer-events: none;
+        }
+        span{
+          font-size: 2rem;
+          color: $white;
+          z-index: 1;
+        }
+        p{
+          font-size: 1.3rem;
+          color: $white;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  &-partner{
+    text-align: center;
+    margin-top: 14rem;
+    position: relative;
+    h4{
+      color: $white;
+      margin-bottom: 4rem;
+      font-weight: 700;
+      font-size: 4.8rem;
+    }
+    &-light-blur{
+      width: 130rem;
+      height: 1rem;
+      position: absolute;
+      top: 12rem;
+      left: 0;
+      -webkit-filter: blur(35rem);
+      filter: blur(7rem);
+      background-color: #fff;
+    }
+    &__logo{
+      &--item{
+        display: inline-block;
+        width: 12rem;
+        height: 12rem;
+        margin-right: 7rem;
+      }
+    }
+  }
+}
+.footer{
+  color: $white;
+  padding-top: 10rem;
+  background-color: $darkblues;
+  &-line{
+    height: 30rem;
+    border-bottom: 1px solid $Orchid
+  }
+  &-logo{
+    margin-right: 8rem;
+    &:last-child{
+      margin-right: 0;
+    }
+    width: 26.6rem;
+    height: 7.2rem;
+    h4{
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+    span,p{
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      display: block;
+    }
+    &-contact{
+      padding-top: 1.5rem;
+      span{
+        margin: 1rem 0 1rem 0;
+      }
+      &-social{
+        &__item{
+          margin-top: 2rem;
+          &--son{
+            width: 3.5rem;
+            height: 3.5rem;
+            display: inline-block;
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+  }
+  &-cr{
+    height: 5rem;
+    width: 100%;
+    display: inline-block;
+    color: $white;
+    padding-top: 1.5rem;
+    span{
+      width: 30rem;
+      &:last-child{
+        float: right;
+      }
+    }
+  }
+}
