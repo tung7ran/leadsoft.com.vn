@@ -12,47 +12,50 @@
 }
 
 .header{
-  height: 0;
   padding-top: 3rem;
-  .header-outside{
+  &-outside{
     padding: 2.7rem 0 2.7rem;
     height: 7.7rem;
     margin: 0 auto;
     &-nav{
       padding-left: 60rem;
+      li{
+        display: inline-block;
+        margin-right: 2.1rem;
+        a{
+          font-size: 1.8rem;
+          color: $white;
+        }
+      }
+      &-button{
+        display: none;
+      }
     }
     img{
       height: auto;
       width: 21rem;
     }
-    li{
-      display: inline-block;
-      margin-right: 2.1rem;
-      a{
-        font-size: 1.8rem;
-        color: $white;
-      }
-    }
   }
 }
 @for $i from 1 through 10 {
-    .content-news-right-item:nth-child(#{$i}) {
+    .content-home-right-item:nth-child(#{$i}) {
       animation:jump 4s infinite;
       animation-delay:calc(.1*#{$i}s);
     }
   }
 
 @for $i from 1 through 10 {
-    .content-news-right-items:nth-child(#{$i}) {
+    .content-home-right-items:nth-child(#{$i}) {
       animation:jumps 3s infinite;
       animation-delay:calc(.1*#{$i}s);
     }
   }
   $gutter:1em;
 
-.content-news{
+.content-home{
     padding-bottom: 10rem;
-    .content-news-animation{
+    position: relative;
+    .content-home-animation{
       padding-top: 10rem;
     }
     &-left{
@@ -75,7 +78,7 @@
       p{
         font-weight: 400;
         font-size: 1.8rem;
-        line-height: 170%;
+        line-height: 1.7;
         color: $gray;
       }
       &-light-blur{
@@ -111,6 +114,8 @@
         z-index: 17;
         background-image: url('/images/1.png');
         background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
       }
       .card-between{
         position: absolute;
@@ -119,8 +124,9 @@
         z-index: 16;
         background-image: url('/images/2.png');
         background-repeat: no-repeat;
+        background-size: contain;
+        width: 75%;
         filter: drop-shadow(2px 15px 10px $black);
-
       }
       .card-down{
         position: absolute;
@@ -129,6 +135,8 @@
         z-index: 15;
         background-image: url('/images/3.png');
         background-repeat: no-repeat;
+        background-size: contain;
+        width: 72%;
       }
       .hand{
         background-image: url('/images/4.png');
@@ -160,6 +168,7 @@
         z-index: 6;
         background-image: url('/images/circle.png');
         background-repeat: no-repeat;
+        background-size: contain;
       }
       .medium-ball{
         position: absolute;
@@ -170,6 +179,7 @@
         z-index: 15;
         background-image: url('/images/circle2.png');
         background-repeat: no-repeat;
+        background-size: contain;
       }
       .large-ball{
         position: absolute;
@@ -180,6 +190,7 @@
         z-index: 17;
         background-image: url('/images/circle3.png');
         background-repeat: no-repeat;
+        background-size: contain;
       }
       &-light-blur{
         width: 45rem;
@@ -227,9 +238,8 @@
 
   &-achievement{
     margin-left: 6.5rem;
-    ul{
-      display: inline-block;
-      li{
+    &__list{
+      &--item{
         display: inline-block;
         margin-right: 10rem;
         .number{
@@ -262,7 +272,7 @@
       h4{
         font-size: 4.8rem;
         color: $white;
-        line-height: 10rem;
+        line-height: 1;
         font-weight: bold;
       }
       p{
@@ -360,7 +370,7 @@
       h4{
         font-size: 4.8rem;
         color: $white;
-        line-height: 10rem;
+        line-height: 1;
         font-weight: bold;
       }
       p{
@@ -465,7 +475,7 @@
       h4{
         font-size: 4.8rem;
         color: $white;
-        line-height: 8rem;
+        line-height: 8;
         text-align: center;
         font-weight: 700;
       }
@@ -538,7 +548,7 @@
   }
   &-partner{
     text-align: center;
-    margin-top: 14rem;
+    margin-top: 8rem;
     position: relative;
     h4{
       color: $white;
@@ -621,4 +631,43 @@
       }
     }
   }
+}
+#scrollToTop{
+  display: inline-block;
+  background: $lightblueup;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  &::after {
+      content: "\f077";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 2em;
+      line-height: 0.5;
+      color: $white;
+      top: 1.9rem;
+      position: absolute;
+      left: 1.7rem;
+    }
+  &:hover {
+      cursor: pointer;
+      background-color: $lightblue;
+  }
+  &:active {
+      background-color: $lightbluedown;
+  }
+}
+.show {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
