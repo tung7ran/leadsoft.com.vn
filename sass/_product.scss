@@ -1,0 +1,91 @@
+.header-product{
+    height: auto;
+}
+.product{
+    &-projects {
+        .mobile-slider-top,
+        .mobile-slider-between,
+        .mobile-slider-bottom {
+            display: none;
+        }
+        height: 136.4rem;
+        &-heading {
+            position: relative;
+            font-size: 3.8rem;
+            font-weight: bold;
+            text-align: center;
+            padding-top: 9.3rem;
+            color: $white;
+            text-transform: uppercase;
+        }
+        &-top,
+        &-between,
+        &-bottom {
+            &__inside {
+                height: 37rem;
+                color: $white;
+                position: relative;
+                left: 1rem;
+                &--image {
+                    position: absolute;
+                    width: 58rem;
+                    height: 100%;
+                    img {
+                        height: 100%;
+                    }
+                }
+                &--heading {
+                    font-size: 1.8rem;
+                    position: relative;
+                    margin-top: 4rem;
+                    margin-left: 4rem;
+                }
+                &--text {
+                    font-size: 1.6rem;
+                    position: relative;
+                    margin: 1.5rem 39% 2rem 4rem;
+                    height: 8rem;
+                }
+                &--btn {
+                    position: relative;
+                    font-size: 1.6rem;
+                    color: $white;
+                    background-color: #F0A21A;
+                    padding: 0.8rem 3rem;
+                    border-radius: 0.5rem;
+                    margin-left: 4rem;
+                    border: none;
+                }
+            }
+        }
+        &-top {
+            top: 7rem;
+        }
+        &-between {
+            top: 9rem;
+        }
+        &-bottom {
+            top: 11rem;
+        }
+    }
+    .content-news-partner{
+        padding-bottom: 10rem;
+    }
+    .out-project-item-top{
+        transform: rotate(180deg);
+        .product-projects-top__inside{
+            transform: rotate(180deg);
+            left: -1rem;
+        }
+    }
+    .out-project-item-bottom{
+        transform: rotate(180deg);
+        .product-projects-top__inside{
+            transform: rotate(180deg);
+            left: -1rem;
+        }
+    }
+    .content-home-partner{
+        margin-bottom: 10rem;
+    }
+}
