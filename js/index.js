@@ -159,35 +159,6 @@ $('.pc-slider-bottom').slick({
       }
     ]
 });
-// gsap.timeline({
-//     scrollTrigger: {
-//     trigger: ".about-us-content-box-first",
-//     start: "center center",
-//     end: "bottom top",
-//     markers: false,
-//     scrub: true,
-//     pin: true,
-//     }
-// })
-// .from(".about-us-content-box-first-textFirst", {x: innerWidth * 2})
-// .from(".about-us-content-box-first-textSecond", {x: innerWidth * -1})
-// .from(".about-us-content-box-first-textThird", {x: innerWidth * 2}) 
-// .from(".about-us-content-box-first-img", {y: innerWidth * 1})
-
-// gsap.timeline({
-//   scrollTrigger: {
-//   trigger: ".about-us-content-box-second",
-//   start: "center center",
-//   end: "bottom top",
-//   markers: false,
-//   scrub: true,
-//   pin: true,
-//   }
-// })
-// .from(".about-us-content-box-second-textFourth", {x: innerWidth * 1})
-// .from(".about-us-content-box-second-textFifth", {x: innerWidth * -1})
-// .from(".about-us-content-box-second-textSixth", {x: innerWidth * 1}) 
-
 var scrollToTop = $('#scrollToTop');
 
 $(window).scroll(function() {
