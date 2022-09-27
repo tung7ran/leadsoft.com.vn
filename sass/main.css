@@ -1216,7 +1216,7 @@ img {
 .about-us-content-box-second {
   position: relative;
   width: 100%;
-  height: 65vh;
+  height: 70rem;
   background: #021c2c;
 }
 
@@ -1676,7 +1676,7 @@ img {
 
 .product-projects-top__inside--image::after, .product-projects-between__inside--image::after, .product-projects-bottom__inside--image::after {
   content: '';
-  background: #0000008f;
+  background: #00000047;
   width: 100%;
   height: 100%;
   top: 0;
@@ -1725,28 +1725,6 @@ img {
   padding-bottom: 10rem;
 }
 
-.product .out-project-item-top {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.product .out-project-item-top .product-projects-top__inside {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  left: -1rem;
-}
-
-.product .out-project-item-bottom {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.product .out-project-item-bottom .product-projects-top__inside {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  left: -1rem;
-}
-
 .product .content-home-partner {
   margin-bottom: 10rem;
 }
@@ -1754,6 +1732,49 @@ img {
 .product .slick-initialized .slick-slide {
   display: block;
   height: 35rem;
+}
+
+* p {
+  line-height: 1.2;
+}
+
+@media (max-width: 1440px) {
+  .product-projects-top__inside--image {
+    width: 43rem;
+  }
+}
+
+@media (max-width: 1366px) {
+  .header-outside-nav {
+    padding-left: 46rem;
+  }
+  .content-home-right {
+    margin: 4rem 0 0 4rem;
+  }
+  .content-home-left h4 {
+    font-size: 6rem;
+  }
+  .content-home-service-first-right {
+    margin-left: 9rem;
+  }
+  .content-home-service-second-right {
+    margin-left: 9rem;
+  }
+  .content-home-our-team-card {
+    margin: 10rem 1rem 0 1rem;
+  }
+  .footer-logo {
+    margin-right: 2rem;
+  }
+  .about-us-content-box-first-img-item {
+    width: 38rem;
+  }
+  .about-us-content-box-second {
+    height: 75rem;
+  }
+  .product-projects-top__inside--image {
+    width: 40rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1809,6 +1830,9 @@ img {
   }
   .content-home-our-team-card {
     margin: 2rem 0.5rem 0 0.5rem;
+  }
+  .content-home-our-team-card-content-image {
+    left: 3.5rem;
   }
   .content-home-our-team-title h4 {
     line-height: 3;
@@ -1890,6 +1914,10 @@ img {
   }
   .product-projects-top__inside--image {
     padding-right: 29rem;
+    width: 58rem;
+  }
+  .product-projects-top__inside--text {
+    font-size: 1.2rem;
   }
   .product .content-home-partner {
     margin-top: 10rem;
@@ -2033,6 +2061,12 @@ img {
   }
   .footer-logo-contact {
     padding-top: 0;
+  }
+  .product-projects-top__inside--image {
+    width: 60rem;
+  }
+  .product-projects-top__inside--text {
+    font-size: 1.2rem;
   }
 }
 
@@ -2191,19 +2225,19 @@ img {
     margin: 2rem 0 0 0;
   }
   .content-home-service-first-left {
-    height: 42rem;
+    height: 46rem;
   }
   .content-home-service-second-right {
-    height: 42rem;
+    height: 46rem;
   }
   .content-home-service-second-right-button {
     left: 1rem;
   }
   .content-home-our-team-card-content-image {
-    left: 13rem;
+    left: 12rem;
   }
   .content-home-partner {
-    height: 26rem !important;
+    height: 38rem !important;
   }
   .content-home-partner__logo--item {
     margin-right: 1rem;
@@ -2325,10 +2359,10 @@ img {
     margin-top: 0;
   }
   .content-home-service-first-left {
-    height: 45rem;
+    height: 47rem;
   }
   .content-home-service-second-right {
-    height: 51rem;
+    height: 53rem;
   }
   .content-home-our-team-title h4 {
     line-height: 0;
@@ -2341,10 +2375,10 @@ img {
     width: 8rem;
   }
   .product .out-project .product-projects-top__inside--image {
-    padding-right: 32rem;
+    padding-right: 34rem;
   }
   .product .product-projects-top__inside--image {
-    padding-right: 32rem;
+    padding-right: 34rem;
   }
   .contact-content-form-logo h4 {
     right: 0;
