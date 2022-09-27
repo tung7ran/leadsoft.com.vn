@@ -113,6 +113,9 @@
                 }
             }
         }
+        &-box-second {
+            height: 85rem;
+        }
     }
     .contact-content{
         &-info{
@@ -168,8 +171,12 @@
         }
         .content-home-partner{
             margin-top: 10rem;
-            height: 30rem;
+            height: 18rem ;
         }
+    }
+    .product .slick-initialized .slick-slide {
+        display: block;
+        height: 25rem;
     }
 }
 @media (max-width: 768px) {
@@ -479,6 +486,7 @@
             }
         }
         &-partner{
+            height: 26rem !important;
             &__logo{
                 &--item{
                     margin-right: 1rem;

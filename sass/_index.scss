@@ -475,7 +475,7 @@
       h4{
         font-size: 4.8rem;
         color: $white;
-        line-height: 8;
+        line-height: 3;
         text-align: center;
         font-weight: 700;
       }
@@ -564,14 +564,14 @@
       left: 0;
       -webkit-filter: blur(35rem);
       filter: blur(7rem);
-      background-color: #fff;
+      background-color: $white;
     }
     &__logo{
       &--item{
         display: inline-block;
         width: 12rem;
         height: 12rem;
-        margin-right: 7rem;
+        margin-right: 2rem;
       }
     }
   }
